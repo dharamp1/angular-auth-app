@@ -1,0 +1,39 @@
+<div class="error-message" *ngIf="errorMessage">{{errorMessage}}</div>
+<div class="success-message" *ngIf="successMessage">{{successMessage}}</div>
+<div class="container" *ngIf="loginActive">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" type="email" id="email" name="email"
+            [(ngModel)]="email" required>
+        </div>
+         <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" id="password" name="password"
+            [(ngModel)]="password" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+</div>
+<div class="container" *ngIf="registerActive">
+    <h2>Register</h2>
+    <form (ngSubmit)="register()">
+         <div class="form-group">
+            <label for="username">Username</label>
+            <input class="form-control" type="text" id="username" name="username"
+            [(ngModel)]="username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" type="email" id="email" name="email"
+            [(ngModel)]="email" required>
+        </div>
+         <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" id="password" name="password"
+            [(ngModel)]="password" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+</div>
